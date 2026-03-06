@@ -1,0 +1,18 @@
+# Environment variable handler: Choose explicitly between 'dev', 'qa', or 'prod'.
+environment: dev
+
+# Environment Specific Configurations
+dev:
+  base_url: https://www.meesho.com
+  headless: false
+  timeout: 30000
+
+qa:
+  base_url: https://qa.meesho.com
+  headless: true
+  timeout: 45000
+
+prod:
+  base_url: https://www.meesho.com
+  headless: true
+  timeout: 30000

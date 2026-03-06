@@ -1,0 +1,26 @@
+# Virtual Environments
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Playwright specific
+test-results/
+playwright-report/
+blob-report/
+
+# Pytest specific
+.pytest_cache/
+report.html
+screenshots/
+traces/
+
+# Project Specific Ignored Files
+Instructions.txt
+module_to_build.txt
