@@ -1,0 +1,61 @@
+2026-03-16 17:58:24 - MeeshoAutomation - INFO - Successfully loaded JSON test data from: /Users/deepakvarma/Desktop/Meesho_Automation/data/search_products.json
+2026-03-16 17:58:25 - MeeshoAutomation - INFO - Connecting to Real Google Chrome via CDP (Port 9222)...
+2026-03-16 17:58:28 - MeeshoAutomation - INFO - Initializing Pristine Pytest-Playwright Engine.
+2026-03-16 17:58:28 - MeeshoAutomation - INFO - --- Starting Stealth Sequence: kurti ---
+2026-03-16 17:58:59 - MeeshoAutomation - INFO - HomePage: Initiating search for: kurti
+2026-03-16 17:58:59 - MeeshoAutomation - INFO - Checking for 'Sign up now' popup...
+2026-03-16 17:59:08 - MeeshoAutomation - INFO - Search query 'kurti' submitted via Keyboard interaction.
+2026-03-16 17:59:08 - MeeshoAutomation - INFO - Search results hydration in progress.
+2026-03-16 17:59:15 - MeeshoAutomation - INFO - SearchResultsPage: Attempting stable click on product index: 0.
+2026-03-16 17:59:18 - MeeshoAutomation - INFO - Available products for selection: 42
+2026-03-16 17:59:21 - MeeshoAutomation - INFO - Humanized link click dispatched.
+2026-03-16 17:59:24 - MeeshoAutomation - WARNING - URL didn't change. Dispatching JS forced navigation as fallback.
+2026-03-16 17:59:24 - MeeshoAutomation - INFO - Scanning for valid Product Details Page...
+2026-03-16 17:59:24 - MeeshoAutomation - INFO - ProductDetailsPage: Waiting for product hydration...
+2026-03-16 17:59:31 - MeeshoAutomation - INFO - Legitimate PDP confirmed: polyster/crepe fabric-printed fashionable designer kurta/kurti for girls and women | womens wear | womens kurti | girls wear | girls kurti | kurta for womens | kurta for girls
+2026-03-16 17:59:31 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-16 17:59:31 - MeeshoAutomation - INFO - Checking if size selection is required.
+2026-03-16 17:59:31 - MeeshoAutomation - INFO - Found 6 Size chips. Searching for an available variant.
+2026-03-16 17:59:31 - MeeshoAutomation - INFO - Clicking available size chip: S
+2026-03-16 17:59:35 - MeeshoAutomation - INFO - ProductDetailsPage: Attempting 'Add to Cart'.
+2026-03-16 17:59:35 - MeeshoAutomation - INFO - Executing 'Human Jiggle' scroll.
+2026-03-16 17:59:38 - MeeshoAutomation - INFO - Click submitted. Waiting for login modal.
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - Verifying Login Modal presence.
+2026-03-16 17:59:41 - MeeshoAutomation - ERROR - Login Modal NOT detected after Add to Cart.
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - Logged-in session detected. Verifying Cart Update.
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - Verifying product added to cart (Authenticated Flow).
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - Verified AddToCart success via marker: button:has-text('Go to Cart')
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - SUCCESS (Auth): Product kurti added to cart.
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - --- Finished Test: kurti ---
+2026-03-16 17:59:41 - MeeshoAutomation - INFO - --- Finished Test: kurti ---
+2026-03-16 17:59:44 - MeeshoAutomation - INFO - Initializing Pristine Pytest-Playwright Engine.
+2026-03-16 17:59:44 - MeeshoAutomation - INFO - --- Starting Stealth Sequence: shoes ---
+2026-03-16 18:00:11 - MeeshoAutomation - INFO - HomePage: Initiating search for: shoes
+2026-03-16 18:00:11 - MeeshoAutomation - INFO - Checking for 'Sign up now' popup...
+2026-03-16 18:00:20 - MeeshoAutomation - INFO - Search query 'shoes' submitted via Keyboard interaction.
+2026-03-16 18:00:20 - MeeshoAutomation - INFO - Search results hydration in progress.
+2026-03-16 18:00:27 - MeeshoAutomation - INFO - SearchResultsPage: Attempting stable click on product index: 0.
+2026-03-16 18:00:29 - MeeshoAutomation - INFO - Available products for selection: 42
+2026-03-16 18:00:31 - MeeshoAutomation - INFO - Humanized link click dispatched.
+2026-03-16 18:00:34 - MeeshoAutomation - WARNING - URL didn't change. Dispatching JS forced navigation as fallback.
+2026-03-16 18:00:34 - MeeshoAutomation - INFO - Scanning for valid Product Details Page...
+2026-03-16 18:00:34 - MeeshoAutomation - INFO - ProductDetailsPage: Waiting for product hydration...
+2026-03-16 18:00:41 - MeeshoAutomation - INFO - Legitimate PDP confirmed: sw-mexico t-blue dailywear sports sneakers running shoes for men
+2026-03-16 18:00:41 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-16 18:00:41 - MeeshoAutomation - INFO - Checking if size selection is required.
+2026-03-16 18:00:41 - MeeshoAutomation - INFO - Found 5 Size chips. Searching for an available variant.
+2026-03-16 18:00:41 - MeeshoAutomation - INFO - Clicking available size chip: IND-6
+2026-03-16 18:00:45 - MeeshoAutomation - INFO - ProductDetailsPage: Attempting 'Add to Cart'.
+2026-03-16 18:00:46 - MeeshoAutomation - INFO - Executing 'Human Jiggle' scroll.
+2026-03-16 18:00:49 - MeeshoAutomation - INFO - Click submitted. Waiting for login modal.
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - Verifying Login Modal presence.
+2026-03-16 18:00:52 - MeeshoAutomation - ERROR - Login Modal NOT detected after Add to Cart.
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - Logged-in session detected. Verifying Cart Update.
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - Verifying product added to cart (Authenticated Flow).
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - Verified AddToCart success via marker: button:has-text('Go to Cart')
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - SUCCESS (Auth): Product shoes added to cart.
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - --- Finished Test: shoes ---
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - --- Finished Test: shoes ---
+2026-03-16 18:00:52 - MeeshoAutomation - INFO - Detached from Real Google Chrome.
