@@ -9,6 +9,8 @@ A robust, enterprise-grade web automation framework built with Python and Playwr
 - **Data-Driven Testing (DDT)**: Dynamically executes search and checkout scenarios using external `JSON` data sources.
 - **Advanced Stealth Engine**: Custom implementation for masking automation markers and mimicking human browser behavior to bypass sophisticated WAF/Bot detection.
 - **Environment Agnostic**: Flexible configuration for `dev`, `qa`, and `prod` environments via `config.yaml`.
+- **AI-Driven Dynamic Test Generation (Module 5)**: Uses Google Gemini (2.5 Flash) to automatically generate high-fidelity, realistic test cases (product names and test types) which are then executed by the framework.
+- **Hybrid AI Data Strategy**: Implemented a sophisticated hybrid strategy where test data is reused for stability and speed, but can be dynamically regenerated using a runtime `--fresh` flag. This ensures both reliability for repeated regression and true AI-driven test coverage for exploratory automation.
 - **Rich Diagnostic Reporting**: Automatic generation of:
   - **HTML Execution Reports**: Comprehensive test summaries with timestamps.
   - **Trace Files**: Deep debugging with Playwright's trace viewer.
@@ -18,26 +20,22 @@ A robust, enterprise-grade web automation framework built with Python and Playwr
 
 ```text
 Meesho_Automation/
-├── config/
-│   └── config.yaml           # Environment variables (URLs, Timeouts)
 ├── data/
-│   └── search_products.json  # Search keywords for Data-Driven tests
+│   ├── search_products.json  # Static fallback keywords
+│   └── ai_test_data.json     # Dynamically generated products (Gemini)
 ├── pages/
-│   ├── base_page.py          # Core wrapper for basic Playwright actions
-│   ├── home_page.py          # Home view interactions
-│   ├── search_results_page.py # Result grid handling
-│   └── product_details_page.py # PDP validation and cart actions
+│   ├── base_page.py          # Core Playwright wrapper
+│   ├── home_page.py          # Search bar action logic
+│   └── ...                   # Other Page Objects
 ├── tests/
-│   ├── base_test.py          # Project-level pytest fixtures
-│   ├── conftest.py           # Stealth injection and hook implementations
-│   └── test_search_add_to_cart.py # Core E2E Test Scenarios
+│   ├── conftest.py           # Stealth engine & CLI flags (--fresh)
+│   └── test_search_add_to_cart.py # AI-driven E2E Test
 ├── utils/
-│   ├── env_manager.py        # Config loader logic
-│   ├── logger.py             # Standardized execution logging
-│   ├── data_loader.py        # JSON/YAML data parser
-│   └── wait_utils.py         # Performance-optimized wait strategies
-├── pytest.ini                # Test runner configuration
-└── requirements.txt          # Project dependencies
+│   ├── ai_test_generator.py  # Gemini LLM engine (Module 5)
+│   └── ...                   # Standard utilities
+├── .env                      # API Keys (Gemini)
+├── pytest.ini                # Execution configuration
+└── requirements.txt          # AI & Playwright dependencies
 ```
 
 ## 🛠 Installation & Setup
@@ -55,18 +53,43 @@ Meesho_Automation/
    playwright install chromium
    ```
 
+## 🕵️ Hybrid Stealth Execution (WAF Bypass)
+
+To reliably bypass advanced bot-detection systems (like Akamai), this framework uses a **Hybrid Manual-Automation Flow**. This ensures the browser profile is "warmed up" by a real human before the automation takes over.
+
+### Pre-requisite: Manual Browser Launch
+You must launch a instance of Google Chrome with Remote Debugging enabled **before** running the tests:
+
+1. **Close all existing Chrome windows.**
+2. **Run the following command in your terminal:**
+   ```bash
+   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=chrome-debug
+   ```
+3. **Human Warm-up:** 
+   - Once Chrome opens, navigate to `https://www.meesho.com` manually.
+   - Perform a quick search or browse for 10-15 seconds like a normal user.
+   - This "proves" to the website that a real human is using the session.
+
+4. **Run Automation:** Leave this Chrome window open and run the test command (see below). The script will automatically connect to this "human-verified" session.
+
 ## 🏃 Running Tests
 
-### Standard Execution
-To run the automated search and "Add to Cart" flow:
+### Standard Execution (Reuse AI Data)
+To run the automated search and "Add to Cart" flow using existing AI-generated products:
 ```bash
 pytest tests/test_search_add_to_cart.py -v
+```
+
+### Fresh AI Data Generation
+To force Gemini to generate a brand new set of test products before running the automation:
+```bash
+pytest tests/test_search_add_to_cart.py -v --fresh
 ```
 
 ### Generating Reports
 To generate a detailed HTML report:
 ```bash
-pytest tests/test_search_add_to_cart.py --html=report.html --self-contained-html
+pytest tests/test_search_add_to_cart.py -v --html=report.html --self-contained-html
 ```
 
 ## 📊 Diagnostics and Observations

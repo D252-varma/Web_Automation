@@ -6,6 +6,10 @@ from utils.logger import Logger
 
 logger = Logger.get_logger()
 
+def pytest_addoption(parser):
+    """Register custom CLI flags for the framework."""
+    parser.addoption("--fresh", action="store_true", help="Force regeneration of AI test data.")
+
 @pytest.fixture(scope="session", autouse=True)
 def load_env_config():
     """Reads configuration once for the session. Purging profiles is skipped for Real Chrome mode."""

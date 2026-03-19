@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "product": "Cotton Floral Kurti",
+      "test_type": "add_to_cart"
+    },
+    {
+      "product": "Banarasi Silk Saree",
+      "test_type": "add_to_cart"
+    },
+    {
+      "product": "Men's Sports Shoes",
+      "test_type": "add_to_cart"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+2026-03-19 21:48:30 - MeeshoAutomation - INFO - Successfully loaded JSON test data from: /Users/deepakvarma/Desktop/Meesho_Automation/data/ai_test_data.json
+2026-03-19 21:48:31 - MeeshoAutomation - INFO - Connecting to Real Google Chrome via CDP (Port 9222)...
+2026-03-19 21:48:34 - MeeshoAutomation - INFO - Initializing Pristine Pytest-Playwright Engine.
+2026-03-19 21:48:34 - MeeshoAutomation - INFO - --- Processing Product: Cotton Floral Kurti ---
+2026-03-19 21:48:50 - MeeshoAutomation - INFO - HomePage: Initiating search for: Cotton Floral Kurti
+2026-03-19 21:48:50 - MeeshoAutomation - INFO - Checking for 'Sign up now' popup...
+2026-03-19 21:49:01 - MeeshoAutomation - INFO - Search query 'Cotton Floral Kurti' submitted via Keyboard interaction.
+2026-03-19 21:49:02 - MeeshoAutomation - INFO - Search results hydration in progress.
+2026-03-19 21:49:09 - MeeshoAutomation - INFO - SearchResultsPage: Attempting stable click on product index: 0.
+2026-03-19 21:49:12 - MeeshoAutomation - INFO - Available products for selection: 42
+2026-03-19 21:49:14 - MeeshoAutomation - INFO - Humanized link click dispatched.
+2026-03-19 21:49:17 - MeeshoAutomation - WARNING - URL didn't change. Dispatching JS forced navigation as fallback.
+2026-03-19 21:49:17 - MeeshoAutomation - INFO - ProductDetailsPage: Waiting for product hydration...
+2026-03-19 21:49:25 - MeeshoAutomation - INFO - Legitimate PDP confirmed: cotton printed kurta set for women (combo of 2 )
+2026-03-19 21:49:25 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:49:25 - MeeshoAutomation - INFO - Checking if size selection is required.
+2026-03-19 21:49:25 - MeeshoAutomation - INFO - Found 5 Size chips. Searching for an available variant.
+2026-03-19 21:49:25 - MeeshoAutomation - INFO - Clicking available size chip: S
+2026-03-19 21:49:29 - MeeshoAutomation - INFO - ProductDetailsPage: Attempting 'Add to Cart'.
+2026-03-19 21:49:29 - MeeshoAutomation - INFO - Executing 'Human Jiggle' scroll.
+2026-03-19 21:49:32 - MeeshoAutomation - INFO - Click submitted. Waiting for login modal.
+2026-03-19 21:49:35 - MeeshoAutomation - INFO - Verifying Login Modal presence.
+2026-03-19 21:49:36 - MeeshoAutomation - ERROR - Login Modal NOT detected after Add to Cart.
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - Auth session active. Verifying UI success markers.
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - Verifying product added to cart (Authenticated Flow).
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - Verified AddToCart success via marker: button:has-text('Go to Cart')
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - Cart Count transitioned from 0 -> 0
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - VERIFIED (Auth): Cart count update verified for: Cotton Floral Kurti
+2026-03-19 21:49:36 - MeeshoAutomation - INFO - --- Flow Complete: Cotton Floral Kurti ---
+2026-03-19 21:49:39 - MeeshoAutomation - INFO - Initializing Pristine Pytest-Playwright Engine.
+2026-03-19 21:49:39 - MeeshoAutomation - INFO - --- Processing Product: Banarasi Silk Saree ---
+2026-03-19 21:49:58 - MeeshoAutomation - INFO - HomePage: Initiating search for: Banarasi Silk Saree
+2026-03-19 21:49:58 - MeeshoAutomation - INFO - Checking for 'Sign up now' popup...
+2026-03-19 21:50:08 - MeeshoAutomation - INFO - Search query 'Banarasi Silk Saree' submitted via Keyboard interaction.
+2026-03-19 21:50:08 - MeeshoAutomation - INFO - Search results hydration in progress.
+2026-03-19 21:50:17 - MeeshoAutomation - INFO - SearchResultsPage: Attempting stable click on product index: 0.
+2026-03-19 21:50:21 - MeeshoAutomation - INFO - Available products for selection: 42
+2026-03-19 21:50:23 - MeeshoAutomation - INFO - Humanized link click dispatched.
+2026-03-19 21:50:26 - MeeshoAutomation - WARNING - URL didn't change. Dispatching JS forced navigation as fallback.
+2026-03-19 21:50:26 - MeeshoAutomation - INFO - ProductDetailsPage: Waiting for product hydration...
+2026-03-19 21:50:35 - MeeshoAutomation - INFO - Legitimate PDP confirmed: kanjivaram silk sarees new collection 2023
+2026-03-19 21:50:35 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:50:35 - MeeshoAutomation - INFO - Checking if size selection is required.
+2026-03-19 21:50:35 - MeeshoAutomation - INFO - Found 1 Size chips. Searching for an available variant.
+2026-03-19 21:50:35 - MeeshoAutomation - INFO - Clicking available size chip: Free Size
+2026-03-19 21:50:39 - MeeshoAutomation - INFO - ProductDetailsPage: Attempting 'Add to Cart'.
+2026-03-19 21:50:39 - MeeshoAutomation - INFO - Executing 'Human Jiggle' scroll.
+2026-03-19 21:50:42 - MeeshoAutomation - INFO - Click submitted. Waiting for login modal.
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - Verifying Login Modal presence.
+2026-03-19 21:50:45 - MeeshoAutomation - ERROR - Login Modal NOT detected after Add to Cart.
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - Auth session active. Verifying UI success markers.
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - Verifying product added to cart (Authenticated Flow).
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - Verified AddToCart success via marker: button:has-text('Go to Cart')
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - Cart Count transitioned from 0 -> 0
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - VERIFIED (Auth): Cart count update verified for: Banarasi Silk Saree
+2026-03-19 21:50:45 - MeeshoAutomation - INFO - --- Flow Complete: Banarasi Silk Saree ---
+2026-03-19 21:50:48 - MeeshoAutomation - INFO - Initializing Pristine Pytest-Playwright Engine.
+2026-03-19 21:50:48 - MeeshoAutomation - INFO - --- Processing Product: Men's Sports Shoes ---
+2026-03-19 21:51:13 - MeeshoAutomation - INFO - HomePage: Initiating search for: Men's Sports Shoes
+2026-03-19 21:51:13 - MeeshoAutomation - INFO - Checking for 'Sign up now' popup...
+2026-03-19 21:51:23 - MeeshoAutomation - INFO - Search query 'Men's Sports Shoes' submitted via Keyboard interaction.
+2026-03-19 21:51:23 - MeeshoAutomation - INFO - Search results hydration in progress.
+2026-03-19 21:51:32 - MeeshoAutomation - INFO - SearchResultsPage: Attempting stable click on product index: 0.
+2026-03-19 21:51:35 - MeeshoAutomation - INFO - Available products for selection: 42
+2026-03-19 21:51:37 - MeeshoAutomation - INFO - Humanized link click dispatched.
+2026-03-19 21:51:39 - MeeshoAutomation - WARNING - URL didn't change. Dispatching JS forced navigation as fallback.
+2026-03-19 21:51:39 - MeeshoAutomation - INFO - ProductDetailsPage: Waiting for product hydration...
+2026-03-19 21:51:48 - MeeshoAutomation - INFO - Legitimate PDP confirmed: sw-mexico t-blue dailywear sports sneakers running shoes for men
+2026-03-19 21:51:48 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:51:48 - MeeshoAutomation - INFO - Checking if size selection is required.
+2026-03-19 21:51:48 - MeeshoAutomation - INFO - Found 5 Size chips. Searching for an available variant.
+2026-03-19 21:51:48 - MeeshoAutomation - INFO - Clicking available size chip: IND-6
+2026-03-19 21:51:52 - MeeshoAutomation - INFO - ProductDetailsPage: Attempting 'Add to Cart'.
+2026-03-19 21:51:52 - MeeshoAutomation - INFO - Executing 'Human Jiggle' scroll.
+2026-03-19 21:51:56 - MeeshoAutomation - INFO - Click submitted. Waiting for login modal.
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Verifying Login Modal presence.
+2026-03-19 21:51:59 - MeeshoAutomation - ERROR - Login Modal NOT detected after Add to Cart.
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Auth session active. Verifying UI success markers.
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Verifying product added to cart (Authenticated Flow).
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Verified AddToCart success via marker: button:has-text('Go to Cart')
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - ProductDetailsPage: Fetching current cart count.
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Cart Count transitioned from 0 -> 0
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - VERIFIED (Auth): Cart count update verified for: Men's Sports Shoes
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - --- Flow Complete: Men's Sports Shoes ---
+2026-03-19 21:51:59 - MeeshoAutomation - INFO - Detached from Real Google Chrome.
