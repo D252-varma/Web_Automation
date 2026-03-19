@@ -24,3 +24,8 @@ traces/
 # Project Specific Ignored Files
 Instructions.txt
 module_to_build.txt
+
+# AI and Environment Files
+.env
+data/ai_test_data.json
+logs/
