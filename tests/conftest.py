@@ -4,7 +4,10 @@ import time
 from utils.env_manager import EnvironmentManager
 from utils.logger import Logger
 
+from utils.ai_failure_analyzer import AIFailureAnalyzer
+
 logger = Logger.get_logger()
+analyzer = AIFailureAnalyzer() # Pre-initialized for session
 
 def pytest_addoption(parser):
     """Register custom CLI flags for the framework."""
@@ -91,8 +94,18 @@ def pytest_runtest_makereport(item, call):
         if page:
             os.makedirs("screenshots", exist_ok=True)
             try:
-                page.screenshot(path=f"screenshots/fail_{item.name}.png")
-                # Save DOM for extreme debugging
-                with open(f"screenshots/fail_{item.name}.html", "w") as f:
-                    f.write(page.content())
-            except: pass
+                screenshot_path = f"screenshots/fail_{item.name}.png"
+                html_path = f"screenshots/fail_{item.name}.html"
+                page.screenshot(path=screenshot_path)
+                
+                # Capture HTML source
+                html_content = page.content()
+                with open(html_path, "w") as f:
+                    f.write(html_content)
+                
+                # --- NEW: Module 6 - AI Failure Analysis ---
+                logger.info(f"Test '{item.name}' failed. Initiating AI Root Cause Analysis...")
+                analyzer.analyze_failure(html_content, item.name)
+                
+            except Exception as e:
+                logger.error(f"Failed to capture failure artifacts or run AI analysis: {e}")

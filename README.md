@@ -9,8 +9,9 @@ A robust, enterprise-grade web automation framework built with Python and Playwr
 - **Data-Driven Testing (DDT)**: Dynamically executes search and checkout scenarios using external `JSON` data sources.
 - **Advanced Stealth Engine**: Custom implementation for masking automation markers and mimicking human browser behavior to bypass sophisticated WAF/Bot detection.
 - **Environment Agnostic**: Flexible configuration for `dev`, `qa`, and `prod` environments via `config.yaml`.
-- **AI-Driven Dynamic Test Generation (Module 5)**: Uses Google Gemini (2.5 Flash) to automatically generate high-fidelity, realistic test cases (product names and test types) which are then executed by the framework.
-- **Hybrid AI Data Strategy**: Implemented a sophisticated hybrid strategy where test data is reused for stability and speed, but can be dynamically regenerated using a runtime `--fresh` flag. This ensures both reliability for repeated regression and true AI-driven test coverage for exploratory automation.
+- **AI-Driven Dynamic Test Generation**: Uses Google Gemini (2.5 Flash) to automatically generate high-fidelity, realistic test cases (product names and test types) which are then executed by the framework.
+- **AI-Powered Failure Analysis**: Automated root-cause detection. On failure, Gemini analyzes the captured HTML source and explains the probable reason (Identifying WAF blocks vs. UI state issues).
+- **Hybrid AI Data Strategy**: Implemented a sophisticated hybrid strategy where test data is reused for stability and speed, but can be dynamically regenerated using a runtime `--fresh` flag.
 - **Rich Diagnostic Reporting**: Automatic generation of:
   - **HTML Execution Reports**: Comprehensive test summaries with timestamps.
   - **Trace Files**: Deep debugging with Playwright's trace viewer.
@@ -29,10 +30,15 @@ Meesho_Automation/
 │   └── ...                   # Other Page Objects
 ├── tests/
 │   ├── conftest.py           # Stealth engine & CLI flags (--fresh)
+│   ├── test_ai_failure.py    # AI Failure Analysis Demo (intentional error)
 │   └── test_search_add_to_cart.py # AI-driven E2E Test
 ├── utils/
 │   ├── ai_test_generator.py  # Gemini LLM engine (Module 5)
+│   ├── ai_failure_analyzer.py # AI Diagnostic engine (Module 6)
 │   └── ...                   # Standard utilities
+├── logs/
+│   ├── meesho_automation.log  # Test execution logs
+│   └── ai_failure_report.log  # AI-generated failure explanations
 ├── .env                      # API Keys (Gemini)
 ├── pytest.ini                # Execution configuration
 └── requirements.txt          # AI & Playwright dependencies
@@ -86,10 +92,20 @@ To force Gemini to generate a brand new set of test products before running the 
 pytest tests/test_search_add_to_cart.py -v --fresh
 ```
 
-### Generating Reports
-To generate a detailed HTML report:
+### AI Failure Debugging (Example)
+To see the **AI Analysis in action**, we've included a controlled failure test. This test deliberately looks for a non-existent element to trigger a crash, which then activates Gemini's root-cause explanation:
 ```bash
-pytest tests/test_search_add_to_cart.py -v --html=report.html --self-contained-html
+PYTHONPATH=. pytest tests/test_ai_failure.py -v -s
+```
+**Expected Outcome:** 
+1. The test will FAIL.
+2. In your terminal, look for the **`--- AI FAILURE ANALYSIS ---`** header.
+3. Gemini will explain that you are on the "Meesho Homepage" but looking for a "Product-level button."
+
+### Generating Reports
+To generate a comprehensive HTML summary:
+```bash
+PYTHONPATH=. pytest tests/test_search_add_to_cart.py -v --html=report.html --self-contained-html
 ```
 
 ## 📊 Diagnostics and Observations
