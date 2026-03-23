@@ -13,6 +13,29 @@ def pytest_addoption(parser):
     """Register custom CLI flags for the framework."""
     parser.addoption("--fresh", action="store_true", help="Force regeneration of AI test data.")
 
+def pytest_html_report_title(report):
+    """Custom title for the HTML execution report."""
+    report.title = "Meesho Automation Strategy - Final Execution Report"
+
+def pytest_html_results_summary(prefix, summary, postfix):
+    """Inject custom CSS for a premium, high-fidelity report UI."""
+    prefix.extend([f"""
+    <div style="background: linear-gradient(135deg, #ff4791 0%, #ff85b3 100%); color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(255, 71, 145, 0.2);">
+        <h1 style="margin: 0; font-size: 24px;">🚀 Meesho AI-Powered Automation Framework</h1>
+        <p style="margin: 5px 0 0 0; opacity: 0.9;">Enterprise Stealth Mode | Gemini-Driven Test Generation | AI Diagnostics</p>
+    </div>
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fdfdfd; }}
+        #results-table {{ border-collapse: separate; border-spacing: 0 8px; width: 100%; }}
+        #results-table th {{ background-color: #343a40 !important; color: white !important; padding: 15px; border: none; }}
+        #results-table td {{ background-color: white; padding: 12px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }}
+        .passed {{ color: #28a745 !important; font-weight: 700; }}
+        .failed {{ color: #dc3545 !important; font-weight: 700; }}
+        .skipped {{ color: #ffc107 !important; font-weight: 700; }}
+        .col-result {{ text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }}
+    </style>
+    """])
+
 @pytest.fixture(scope="session", autouse=True)
 def load_env_config():
     """Reads configuration once for the session. Purging profiles is skipped for Real Chrome mode."""
